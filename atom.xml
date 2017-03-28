@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-28T13:11:58.245Z</updated>
+  <updated>2017-03-28T14:27:31.201Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello</title>
+    <link href="http://yoursite.com/2017/03/28/hello/"/>
+    <id>http://yoursite.com/2017/03/28/hello/</id>
+    <published>2017-03-28T14:24:44.000Z</published>
+    <updated>2017-03-28T14:27:31.201Z</updated>
+    
+    <content type="html"><![CDATA[<p>摘要:<br><a id="more"></a><br>正文:Welcome to Mr.Z’s World!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要:&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
