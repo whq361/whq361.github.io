@@ -148,6 +148,7 @@ em {
   top: 2rem;
   left: -0.65rem;
   z-index: 10;
+  transform:transition3d(0,0,0)
 }
 .z-zbzr {
   position: relative;
@@ -160,6 +161,7 @@ em {
   top: 1.16rem;
   left: 2.94rem;
   z-index: 10;
+  transform:transition3d(0,0,0)
 }
 .z-ewl {
   width: 1.225rem;
@@ -170,6 +172,7 @@ em {
   position: relative;
   left: 1.2rem;
   top: -3rem;
+  transform: translateZ(0);
 }
 .z-ewl:after {
   width: 1.325rem;
@@ -180,6 +183,7 @@ em {
   position: absolute;
   top: 0.6rem;
   left: -0.19rem;
+  transform: translateZ(0);
 }
 .z-ewr {
   width: 1.225rem;
@@ -190,6 +194,7 @@ em {
   left: 4rem;
   position: relative;
   top: -3.1rem;
+  transform: translateZ(0);
 }
 .z-ewr:after {
   width: 1.125rem;
@@ -200,6 +205,7 @@ em {
   position: absolute;
   top: -0.05rem;
   left: 3.3rem;
+  transform: translateZ(0);
 }
 .z-el {
   width: 0.8rem;
@@ -211,6 +217,7 @@ em {
   left: 1.9rem;
   position: relative;
   top: -1.7rem;
+  transform: translateZ(0);
 }
 .z-er {
   width: 0.8rem;
@@ -222,9 +229,11 @@ em {
   left: 3.75rem;
   position: relative;
   top: -2.25rem;
+  transform: translateZ(0);
 }
 .zwrap .z-face {
   animation: zface 4s linear;
+  transform: translateZ(0);
 }
 @keyframes zface {
   0% {
@@ -242,6 +251,7 @@ em {
 }
 .zwrap .z-etbk {
   animation: z-etbk 3s linear;
+  transform: translateZ(0);
 }
 @keyframes z-etbk {
   0% {
@@ -253,6 +263,7 @@ em {
 }
 .zwrap .z-etbktop {
   animation: z-etbktop 3s linear;
+  transform: translateZ(0);
 }
 @keyframes z-etbktop {
   0% {
@@ -265,6 +276,7 @@ em {
 .zwrap .z-el,
 .zwrap .z-er {
   animation: z-eye 4s cubic-bezier(1, 1, 0.5, 0.005);
+  transform: translateZ(0);
 }
 @keyframes z-eye {
   0% {
@@ -354,6 +366,7 @@ em {
 }
 .zwrap .z-zbzl {
   animation: z-zbzl 4s cubic-bezier(0.1, 0.025, 0.005, 0.005);
+  transform:transition3d(0,0,0)
 }
 @keyframes z-zbzl {
   0% {
@@ -368,6 +381,7 @@ em {
 }
 .zwrap .z-zbzr {
   animation: z-zbzr 4s cubic-bezier(0.1, 0.025, 0.005, 0.005);
+  transform:transition3d(0,0,0)
 }
 @keyframes z-zbzr {
   0% {
@@ -402,6 +416,7 @@ em {
   background-size: 50rem 20rem;
   background-repeat: repeat-x;
   opacity: 1;
+  transform: translateZ(0);
 }
 @keyframes zwave {
   0% {
@@ -431,6 +446,7 @@ em {
   transition: all 1s;
   transform: translateX(0rem);
   overflow-x: hidden;
+  transform:transition3d(0,0,0)
 }
 .x_box .x_center {
   width: 13.9rem;
@@ -480,6 +496,7 @@ em {
   top: 0;
   color: #474283;
   transition: 1s;
+  transform:transition3d(0,0,0)
 }
 .x_box .x_center .x_header .x_back .x_left {
   position: absolute;
@@ -527,6 +544,7 @@ em {
   z-index: 2;
   transition: all 2s;
   transform-origin: center;
+  transform:transition3d(0,0,0)
 }
 .x_box .x_center .x_con .x_ul li .x_a .x_disc .x_disc_x {
   width: 6.3rem;
@@ -541,6 +559,7 @@ em {
   transform-origin: center;
   background: url(../x_images/dp.png) no-repeat 0 0;
   background-size: 6.3rem 6.3rem;
+  transform:transition3d(0,0,0)
 }
 .x_box .x_center .x_con .x_ul li .x_a .x_age {
   display: block;
@@ -556,6 +575,7 @@ em {
   position: relative;
   transition: all 1s;
   transform: translate(5rem, -7rem);
+  transform:transition3d(0,0,0)
 }
 .x_box .x_center .x_con .x_ul li .x_a .x_singer {
   position: absolute;
@@ -570,6 +590,7 @@ em {
   transform-origin: left;
   transform: rotate(90deg);
   z-index: 3;
+  transform:transition3d(0,0,0)
 }
 .x_box .x_center .x_con .x_ul li .x_a .x_name {
   position: absolute;
@@ -606,6 +627,7 @@ em {
 }
 .x_box .x_center .x_con .x_ul li:nth-of-type(3) .x_a .x_disc .x_disc_x {
   transform: translateX(15rem);
+  transform:transition3d(0,0,0)
 }
 .x_box .x_center .x_con .x_ul li:nth-of-type(4) {
   right: 0.5rem;
@@ -722,6 +744,7 @@ em {
   transform: rotate(0deg);
   transition: 3s;
   text-shadow: 6px 3px 11px rgba(0, 0, 0, 0.7);
+  transform:transition3d(0,0,0)
 }
 .l-con .l-singer {
   width: 12rem;
@@ -823,7 +846,7 @@ em {
 .xg {
   width: 1.625rem;
   height: 3.25rem;
-  border-radius: 0rem 0rem 3.25rem 3.25rem;
+  /*border-radius: 0rem 0rem 3.25rem 3.25rem;*/
   background: rgba(69, 177, 203, 0.51);
   position: absolute;
   left: -3.2rem;
@@ -832,7 +855,7 @@ em {
 .gx {
   width: 1.625rem;
   height: 3.25rem;
-  border-radius: 0rem 0rem 3.25rem 3.25rem;
+  /*border-radius: 0rem 0rem 3.25rem 3.25rem;*/
   background: rgba(69, 203, 150, 0.39);
   position: absolute;
   left: 6.3rem;
@@ -901,6 +924,7 @@ em {
   position: relative;
   margin: 0 auto;
   animation: cd 0.4s linear;
+  transform:transition3d(0,0,0)
 }
 .t-music-page .t-audio .t-cd .t-dot {
   width: 0.4015444rem;
@@ -930,6 +954,7 @@ em {
   z-index: 100;
   background-size: cover;
   background-repeat: no-repeat;
+  transform:transition3d(0,0,0)
 }
 .t-music-page .t-audio .t-line {
   height: 7.41312741rem;
@@ -1013,6 +1038,8 @@ em {
   width: 90%;
   position: relative;
   transform: translateY(50%);
+  transition: .5s;
+  
 }
 .t-music-page .t-lrc-mask ul li {
   list-style: none;
@@ -1025,6 +1052,7 @@ em {
   line-height: 1.23552124rem;
   overflow: hidden;
   white-space: nowrap;
+  transition: .5s;
 }
 .t-music-page .t-lrc-mask ul li.this {
   font-size: 0.8030888rem;
