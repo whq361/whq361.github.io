@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+	//动态获取像素比
+	var pixelRatio=1/window.devicePixelRatio;
+	document.write('<meta charset="utf-8" name="viewport" content="width=device-width,user-scalable=no,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+'">');
+	
+	//获取html节点
+	var html=document.getElementsByTagName("html")[0];
+	//获取html屏幕宽度
+	var pageWidth=html.getBoundingClientRect().width;
+    console.log(pageWidth)
+	//屏幕宽度/数值=结果
+    var rem = pageWidth/16;
+	html.style.fontSize=rem+"px";
+    
+</script>
+<link href="css/zzy.css"  rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="zbody">
+        <div class="zwrap">
+            <!--脸-->
+            <div class="z-face"></div>
+            <!--耳朵-->
+            <div class="z-fhead"></div>
+            <!--犄角-->
+            <div class="z-et"></div>
+            <div class="z-etbk"></div>
+            <div class="z-etbktop"></div>
+            <!--嘴巴子-->
+            <div class="z-zbzl"></div>
+            <div class="z-zbzr"></div>
+            <!--额头纹-->
+            <div class="z-ewl"></div>
+            <div class="z-ewr"></div>
+            <!--眼睛-->
+            <div class="z-el"></div>
+            <div class="z-er"></div>
+        </div>
+        <div class="zfont zwave">
+            Music Radio
+        </div>
+    </div>
+    <div class="x_box" id="box">
+			<div class="x_center">
+				<div class="x_header">
+					<div class="x_top">
+						<a href="javascript:;" class="x_pave"></a>
+					</div>
+					<p class="x_you">Your classic record shop. Sell your old vinyls to us</p>
+					<div class="x_back">
+						<a class="x_left" id="x_left">←</a>
+						<span id="x_span">/</span>
+						<a class="x_right" id="x_right">❤</a>
+					</div>
+				</div>
+				<div class="x_con">
+					<ul class="x_ul" id="x_ul">
+						<!--<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album1.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">GoneAgain</h3>
+							</a>
+						</li>
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album2.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album3.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album3.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album5.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album6.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album7.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album8.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album9.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album10.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album11.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>
+						<li class="x_list">
+							<a class="x_a">
+								<div class="x_disc">
+								    <div class="x_disc_x"></div>
+								    <img src="x_images/album12.jpg" />
+								</div>
+								<span class="x_age">1989</span>
+								<h2 class="x_singer">Brigh</h2>
+								<h3 class="x_name">Gone Again</h3>
+							</a>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+    <div class="l-wrap"></div>
+    <div class="t-music-page"></div>
+    <script src="js/data.js"></script>
+    <script src="js/mTween.js"></script>
+	<script src="js/tween.js"></script>
+	<script src="js/x_style.js"></script>
+    <script src="js/l-text.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/musicPage.js"></script>
+</body>
+</html>
