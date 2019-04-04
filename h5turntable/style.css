@@ -1,0 +1,339 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+input,
+p,
+blockquote,
+th,
+td,
+section,
+canvas {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+  width: 100%;
+  border: none;
+  pointer-events: none;
+}
+textarea {
+  border: none;
+  background: none;
+  resize: none;
+}
+input {
+  display: block;
+  float: left;
+  border: none;
+  background: none;
+  outline: none;
+  height: 0.24rem;
+  line-height: 0.24rem;
+  font-size: 0.2rem;
+  color: #222222;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+html,
+body {
+  font-size: 22px;
+  color: #000;
+  font-family: "Microsoft YaHei", Arial;
+  overflow: hidden;
+  /* width: 6.4rem; */
+  height: 12.5rem;
+  background-color: #fff;
+  -webkit-touch-callout: none; /* 禁用长触弹出的下载图片菜单 */
+  -webkit-user-select: none; /* 禁用长触选择文字等功能 */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.h5-bg {
+  max-width: 6.4rem;
+  height: 100%;
+  background: url(./images/bg.png) no-repeat;
+  background-size: contain;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.h5-content {
+  max-width: 6.4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(./images/gy1.png) no-repeat;
+  background-size: contain;
+}
+.h5-content-true {
+  animation: gy1 1s linear;
+  animation-iteration-count: infinite;
+}
+@keyframes gy1 {
+  0% {
+    background: url(./images/gy2.png) no-repeat;
+    background-size: contain;
+  }
+  12.5% {
+    background: url(./images/gy1.png) no-repeat;
+    background-size: contain;
+  }
+  25% {
+    background: url(./images/gy2.png) no-repeat;
+    background-size: contain;
+  }
+  37.5% {
+    background: url(./images/gy1.png) no-repeat;
+    background-size: contain;
+  }
+  50% {
+    background: url(./images/gy2.png) no-repeat;
+    background-size: contain;
+  }
+  62.5% {
+    background: url(./images/gy1.png) no-repeat;
+    background-size: contain;
+  }
+  75% {
+    background: url(./images/gy2.png) no-repeat;
+    background-size: contain;
+  }
+  87.5% {
+    background: url(./images/gy1.png) no-repeat;
+    background-size: contain;
+  }
+  100% {
+    background: url(./images/gy2.png) no-repeat;
+    background-size: contain;
+  }
+}
+.h5-title-new {
+  font-size: 0.5rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+  color: #fdf56d;
+  font-weight: bold;
+  font-family: "微软雅黑";
+}
+
+.h5-title-bottom {
+  font-size: 0.2rem;
+  text-align: center;
+  color: #fdf56d;
+  font-family: "微软雅黑";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h5-title-bottom .num {
+  width: 0.34rem;
+  height: 0.34rem;
+  border: 0.02rem solid #fdf56d;
+  color: #fdf56d;
+  font-size: 0.15rem;
+  text-align: center;
+  line-height: 0.34rem;
+  border-radius: 50%;
+  margin: 0 0.18rem;
+}
+.h5-more {
+  position: fixed;
+  bottom: 0.8rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 0.2rem;
+  text-align: center;
+  width: 2.4rem;
+  height: 0.52rem;
+  line-height: 0.52rem;
+  background: #fff;
+  color: #fa2864;
+  font-weight: 400;
+  border-radius: 0.5rem;
+}
+.h5-main {
+  height: 7.3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.h5-main-g1 {
+  width: 6.4rem;
+  height: 6.4rem;
+  position: absolute;
+  top: 0.38rem;
+  z-index: 12;
+  background: url(./images/g1.png) no-repeat;
+  background-size: 6.4rem 6.4rem;
+  background-position: center;
+}
+.h5-main-g1-true {
+  animation: g1 2s linear;
+  animation-iteration-count: infinite;
+}
+.h5-main-g2-true {
+  animation: g2 2s linear;
+  animation-iteration-count: infinite;
+}
+.h5-main-g3-true {
+  animation: g3 2s linear;
+  animation-iteration-count: infinite;
+}
+@keyframes g1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes g2 {
+  0% {
+    opacity: 0;
+  }
+  12.5% {
+    opacity: 0.25;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  37.5% {
+    opacity: 0.75;
+  }
+  50% {
+    /* opacity: 1; */
+  }
+  62.5% {
+    opacity: 0.75;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  87.5% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.h5-main-g2 {
+  width: 6.4rem;
+  height: 6.4rem;
+  position: absolute;
+  top: 0.38rem;
+  z-index: 11;
+  background: url(./images/g1.png) no-repeat;
+  background-size: 6rem 6rem;
+
+  background-position: center;
+}
+.h5-main-g3 {
+  width: 6.4rem;
+  height: 6.4rem;
+  position: absolute;
+  top: 0.38rem;
+  z-index: 10;
+  background: url(./images/g1.png) no-repeat;
+
+  background-position: center;
+  background-size: 5.6rem 5.6rem;
+}
+.h5-main-box {
+  width: 6.4rem;
+  height: 6.4rem;
+  background: url(./images/zp.png) no-repeat;
+  background-size: 5.3rem 5.3rem;
+  background-position: center;
+  position: absolute;
+  transform: rotate(22.5deg);
+  top: 0.38rem;
+  z-index: 15;
+}
+.h5-main-box-content {
+  width: 6.4rem;
+  height: 6.4rem;
+  position: absolute;
+  top: 0.38rem;
+  z-index: 20;
+  background: url(./images/zp.png) no-repeat;
+  background-size: 5.3rem 5.3rem;
+  background-position: center;
+}
+
+.h5-main-zz {
+  position: absolute;
+  width: 1.04rem;
+  height: 1.48rem;
+  z-index: 50;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 2.64rem;
+  background: url(./images/zzz.png) no-repeat;
+  background-size: 1.04rem;
+}
+.h5-main-box-content .item {
+  width: 0.9rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 1.25rem;
+  left: 2.75rem;
+  transform-origin: 50% 100%;
+  z-index: 51;
+}
+.h5-main-box-content .item div:nth-child(1) {
+  font-size: 0.4rem;
+  font-weight: 600;
+  width: 0.9rem;
+  text-align: center;
+}
+.h5-main-box-content .item:nth-child(even)>div {
+ color:#ff3535;
+}
+.h5-main-box-content .item div:nth-child(2) {
+  width: 0.9rem;
+  text-align: center;
+  font-size: 0.16rem;
+  transform: scale(0.8);
+}
+.h5-main-box-content .item:nth-child(odd)>div {
+ color:#fa2864;
+}
