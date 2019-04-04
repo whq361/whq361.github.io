@@ -62,7 +62,7 @@ body {
   font-family: "Microsoft YaHei", Arial;
   overflow: hidden;
   /* width: 6.4rem; */
-  height: 12.5rem;
+  height: 100%;
   background-color: #fff;
   -webkit-touch-callout: none; /* 禁用长触弹出的下载图片菜单 */
   -webkit-user-select: none; /* 禁用长触选择文字等功能 */
@@ -74,7 +74,7 @@ body {
   max-width: 6.4rem;
   height: 100%;
   background: url(./images/bg.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative;
   left: 0;
   right: 0;
