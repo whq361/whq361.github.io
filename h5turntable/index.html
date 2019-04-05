@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>赚点-推荐有奖</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
     <script>
         (function (doc, win) {
             var docEl = doc.documentElement,
@@ -96,13 +97,14 @@
 </html>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 <script>
     //大转盘奖品名称
     var restaraunts = [
-        [8, "感觉10个字差不多了吧"],
-        [10, "行不行"],
-        [20, "这样子应该够了吧"],
-        [10, "没问题"],
+        [800, "感觉10个字差不多了吧"],
+        [100, "行不行"],
+        [200, "这样子应该够了吧"],
+        [100, "没问题"],
         [5, "可乐可乐可乐可乐可乐"],
         [8, "乐事"],
         [10, "雪碧"],
@@ -143,13 +145,13 @@
                 duration: 8000,
                 callback: function () {
                     console.log(textArray)
-                    // alert(`恭喜你获得,价值${textArray[0]}元的,${textArray[1]}`)
                     $('.h5-turntable-container').eq(0).removeClass('h5-turntable-container-animation');
                     $('.h5-turntable-main-gd').eq(0).removeClass('h5-turntable-main-gd-animation');
                     $('.h5-turntable-main-g1').removeClass('h5-turntable-main-g1-animation');
                     $('.h5-turntable-main-g2').removeClass('h5-turntable-main-g2-animation');
                     $('.h5-turntable-main-g3').removeClass('h5-turntable-main-g3-animation');
-                  
+                    $.alert(`恭喜你获得,价值${textArray[0]}元的,${textArray[1]}`);
+
                     rotateFlag = !rotateFlag;
                 }
             });
@@ -157,7 +159,7 @@
 
         $(".h5-turntable-main-zz").click(function () {
             if (!num) {
-                alert("对不起,您已经没有次数了");
+                $.alert("对不起,您已经没有次数了");
                 return;
             }
             if (rotateFlag) return;

@@ -76,7 +76,7 @@ body {
   width:100%;
   max-width: 6.4rem;
   height: 100%;
-  background: url(./images/bg.png) no-repeat;
+  background: url(../images/bg.png) no-repeat;
   background-size: cover;
   position: relative;
   left: 0;
@@ -89,7 +89,7 @@ body {
   max-height: 12.34rem;
   display: flex;
   flex-direction: column;
-  background: url(./images/gy1.png) no-repeat;
+  background: url(../images/gy1.png) no-repeat;
   background-size: 100% 12.34rem;
   position:absolute;
   top: 0;
@@ -105,10 +105,10 @@ body {
 }
 @keyframes gybg {
   0% ,100%{
-    background: url(./images/gy2.png) no-repeat;
+    background: url(../images/gy2.png) no-repeat;
    background-size: 100% 12.34rem;
   }50%{
-      background: url(./images/gy1.png) no-repeat;
+      background: url(../images/gy1.png) no-repeat;
    background-size: 100% 12.34rem;
   }
 }
@@ -193,7 +193,7 @@ body {
   position: absolute;
   top: 0.38rem;
   z-index: 10;
-  background: url(./images/g1.png) no-repeat;
+  background: url(../images/g1.png) no-repeat;
   background-position: center;
   background-size: 5.6rem 5.6rem;
    opacity: 1;
@@ -216,7 +216,7 @@ body {
   position: absolute;
   top: 0.38rem;
   z-index: 11;
-  background: url(./images/g1.png) no-repeat;
+  background: url(../images/g1.png) no-repeat;
   background-size: 6rem 6rem;
 
   background-position: center;
@@ -240,7 +240,7 @@ body {
   position: absolute;
   top: 0.38rem;
   z-index: 12;
-  background: url(./images/g1.png) no-repeat;
+  background: url(../images/g1.png) no-repeat;
   background-size: 6.4rem 6.4rem;
   background-position: center;
 }
@@ -267,7 +267,7 @@ body {
 .h5-turntable-main-gd{
   width: 6.4rem;
   height: 6.4rem;
-  background: url(./images/gd1.png) no-repeat;
+  background: url(../images/gd1.png) no-repeat;
   background-size: 4.9rem 4.9rem;
   background-position: center;
   position: absolute;
@@ -281,12 +281,12 @@ body {
 }
 @keyframes gdam {
   0%,25%,50%,75%     {
-  background: url(./images/gd2.png) no-repeat;
+  background: url(../images/gd2.png) no-repeat;
     background-position: center;
     background-size: 4.9rem 4.9rem;
   }
   12.5%,37.5%,100% {
-  background: url(./images/gd1.png) no-repeat;
+  background: url(../images/gd1.png) no-repeat;
     background-position: center;
     background-size: 4.9rem 4.9rem;
   }
@@ -306,7 +306,7 @@ body {
 .h5-turntable-main-box {
   width: 6.4rem;
   height: 6.4rem;
-  background: url(./images/zp.png) no-repeat;
+  background: url(../images/zp.png) no-repeat;
   background-size: 5.3rem 5.3rem;
   background-position: center;
   position: absolute;
@@ -320,7 +320,7 @@ body {
   position: absolute;
   top: 0.38rem;
   z-index: 20;
-  background: url(./images/zp.png) no-repeat;
+  background: url(../images/zp.png) no-repeat;
   background-size: 5.3rem 5.3rem;
   background-position: center;
 }
@@ -334,7 +334,7 @@ body {
   left: 0;
   right: 0;
   top: 2.64rem;
-  background: url(./images/zzz.png) no-repeat;
+  background: url(../images/zzz.png) no-repeat;
   background-size: 1.04rem;
 }
 .h5-turntable-main-box-content .item {
