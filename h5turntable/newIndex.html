@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>赚点-推荐有奖</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt =
+                    "orientationchange" in window ? "orientationchange" : "resize",
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 640) {
+                        docEl.style.fontSize = "100px";
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + "px";
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener("DOMContentLoaded", recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <div class="h5-turntable">
+        <div class="h5-turntable-container">
+            <div style="width: 100%;height: 100%;">
+                <div class="h5-turntable-title">
+                    <div class="h5-turntable-title-new">新人三轮抽奖福利</div>
+                    <div class="h5-turntable-title-bottom">
+                        目前还剩余
+                        <div class="num" id-"num"></div>
+                        次抽奖机会
+                    </div>
+                </div>
+
+                <div class="h5-turntable-main">
+                    <div class="h5-turntable-main-content">
+                        <div style="position:relative;">
+                            <div class="h5-turntable-main-g1"></div>
+                            <div class="h5-turntable-main-g2"></div>
+                            <div class="h5-turntable-main-g3"></div>
+                        </div>
+                                <div class="h5-turntable-main-box-content">
+                                    <div class="item" style="transform: rotate(0deg);">
+                                        <div id="1"></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="item" style="transform: rotate(45deg);">
+                                        <div id="2"></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="item" style="transform: rotate(90deg);">
+                                        <div id="3"></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="item" style="transform: rotate(135deg);">
+                                        <div id="4"></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="item" style="transform: rotate(180deg);">
+                                        <div id="5"></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="item" style="transform: rotate(-135deg);">
+                                        <div id="6"></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="item" style="transform: rotate(-90deg);">
+                                        <div id="7"></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="item" style="transform: rotate(-45deg);">
+                                        <div id="8"></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="h5-turntable-main-zz"></div>
+                                <div class="h5-turntable-main-gd"></div>
+                    </div>
+
+                </div>
+                <div class="h5-turntable-more">
+                    获取更多抽奖机会
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+<script>
+    //大转盘奖品名称
+    var restaraunts = [
+        [8, "感觉10个字差不多了吧"],
+        [10, "行不行"],
+        [20, "这样子应该够了吧"],
+        [10, "没问题"],
+        [5, "可乐可乐可乐可乐可乐"],
+        [8, "乐事"],
+        [10, "雪碧"],
+        [2, "美年达"]
+    ];
+    //false:停止;ture:旋转
+    var rotateFlag = false;
+    //抽奖次数
+    var num = 3;
+    //抽中的id
+    var id = Math.floor(Math.random() * 7 + 1);
+
+    $(document).ready(function () {
+        $('.num')[0].innerHTML = num;
+        console.log($('.item'))
+        $.each($('.item'), function (i, value) {
+          
+            $(this)[0].innerHTML = `<div id=${i + 1}>${restaraunts[i][0]}</div><div>${restaraunts[i][1]}</div>`;
+        });
+        var rotateFn = function (item, textArray) {
+            var angles =
+                item * (360 / restaraunts.length) - 360 / (restaraunts.length * 2);
+            if (angles < 270) {
+                angles = 270 - angles;
+            } else {
+                angles = 360 - angles + 270;
+            }
+            $(".h5-turntable-main-box-content").stopRotate();
+            $('.h5-turntable-container').eq(0).addClass('h5-turntable-container-animation');
+            $('.h5-turntable-main-gd').eq(0).addClass('h5-turntable-main-gd-animation');
+            $('.h5-turntable-main-g1').addClass('h5-turntable-main-g1-animation');
+            $('.h5-turntable-main-g2').addClass('h5-turntable-main-g2-animation');
+            $('.h5-turntable-main-g3').addClass('h5-turntable-main-g3-animation');
+
+            $(".h5-turntable-main-box-content").rotate({
+                angle: 0,
+                animateTo: angles + 1800 + 22.5,
+                duration: 8000,
+                callback: function () {
+                    console.log(textArray)
+                    // alert(`恭喜你获得,价值${textArray[0]}元的,${textArray[1]}`)
+                    $('.h5-turntable-container').eq(0).removeClass('h5-turntable-container-animation');
+                    $('.h5-turntable-main-gd').eq(0).removeClass('h5-turntable-main-gd-animation');
+                    $('.h5-turntable-main-g1').removeClass('h5-turntable-main-g1-animation');
+                    $('.h5-turntable-main-g2').removeClass('h5-turntable-main-g2-animation');
+                    $('.h5-turntable-main-g3').removeClass('h5-turntable-main-g3-animation');
+                  
+                    rotateFlag = !rotateFlag;
+                }
+            });
+        };
+
+        $(".h5-turntable-main-zz").click(function () {
+            if (!num) {
+                alert("对不起,您已经没有次数了");
+                return;
+            }
+            if (rotateFlag) return;
+
+            rotateFlag = !rotateFlag;
+            num--;
+            $('.num')[0].innerHTML = num;
+            var item = id;
+            rotateFn(item - 2, restaraunts[item - 1]);
+        });
+
+    });
+</script>
