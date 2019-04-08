@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>赚点-推荐有奖</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -133,8 +133,8 @@
                 angles = 360 - angles + 270;
             }
             $(".h5-turntable-main-box-content").stopRotate();
-            $('.h5-turntable-container').eq(0).addClass('h5-turntable-container-animation');
-            $('.h5-turntable-main-gd').eq(0).addClass('h5-turntable-main-gd-animation');
+            $('.h5-turntable-container').addClass('h5-turntable-container-animation');
+            $('.h5-turntable-main-gd').addClass('h5-turntable-main-gd-animation');
             // $('.h5-turntable-main-g1').addClass('h5-turntable-main-g1-animation');
             // $('.h5-turntable-main-g2').addClass('h5-turntable-main-g2-animation');
             // $('.h5-turntable-main-g3').addClass('h5-turntable-main-g3-animation');
@@ -145,8 +145,8 @@
                 duration: 8000,
                 callback: function () {
                     console.log(textArray)
-                    $('.h5-turntable-container').eq(0).removeClass('h5-turntable-container-animation');
-                    $('.h5-turntable-main-gd').eq(0).removeClass('h5-turntable-main-gd-animation');
+                    $('.h5-turntable-container').removeClass('h5-turntable-container-animation');
+                    $('.h5-turntable-main-gd').removeClass('h5-turntable-main-gd-animation');
                     // $('.h5-turntable-main-g1').removeClass('h5-turntable-main-g1-animation');
                     // $('.h5-turntable-main-g2').removeClass('h5-turntable-main-g2-animation');
                     // $('.h5-turntable-main-g3').removeClass('h5-turntable-main-g3-animation');
