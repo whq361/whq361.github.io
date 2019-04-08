@@ -100,16 +100,43 @@ body {
 
 }
 .h5-turntable-container-animation{
-  animation: gybg 0.3s ease-in-out infinite;
-  -webkit-animation: gybg 0.3s ease-in-out infinite;
+  animation: gybg 8s ease-in-out infinite;
+  -webkit-animation: gybg 8s ease-in-out infinite;
 }
 @keyframes gybg {
-  0% ,100%{
+    0%,10%,20%,30%,40%,50%,75%   {
     background: url(../images/gy2.png) no-repeat;
    background-size: 100% 12.34rem;
-  }50%{
+  }  5%,15%,25%,35%,45%,60%,100%{
       background: url(../images/gy1.png) no-repeat;
    background-size: 100% 12.34rem;
+  }
+}
+.h5-turntable-main-gd{
+  width: 6.4rem;
+  height: 6.4rem;
+  background: url(../images/gd1.png) no-repeat;
+  background-size: 4.9rem 4.9rem;
+  background-position: center;
+  position: absolute;
+  top: 0.38rem;
+  z-index: 25;
+}
+
+.h5-turntable-main-gd-animation{
+  animation: gdam 8s ease-in-out infinite;
+  -webkit-animation: gdam 8s ease-in-out infinite;
+}
+@keyframes gdam {
+  0%,10%,20%,30%,40%,50%,75%     {
+    background: url(../images/gd2.png) no-repeat;
+    background-position: center;
+    background-size: 4.9rem 4.9rem;
+  }
+  5%,15%,25%,35%,45%,60%,100% {
+  background: url(../images/gd1.png) no-repeat;
+    background-position: center;
+    background-size: 4.9rem 4.9rem;
   }
 }
 
@@ -204,7 +231,7 @@ body {
   background-size: 5.6rem 5.6rem; */
    /* opacity: 1; */
 }
-.h5-turntable-main-g1-animation {
+/*.h5-turntable-main-g1-animation {
   animation: g1 2.4s linear infinite;
   -webkit-animation: g1 2.4s linear infinite;
 }
@@ -219,7 +246,7 @@ body {
   }
   
 }
-.h5-turntable-main-g2 {
+*/.h5-turntable-main-g2 {
   width: 6rem;
   height: 6rem;
   position: absolute;
@@ -240,7 +267,7 @@ body {
 
   background-position: center; */
 } 
-.h5-turntable-main-g2-animation {
+/*.h5-turntable-main-g2-animation {
   animation: g2 2.4s linear infinite;
     -webkit-animation: g2 2.4s linear infinite;
 }
@@ -254,7 +281,7 @@ body {
   height: 6rem;
   }
 }
-
+*/
 .h5-turntable-main-g3 {
   width: 6.4rem;
   height: 6.4rem;
@@ -276,13 +303,13 @@ body {
   background-position: center; */
 }
 
-
+/*
 .h5-turntable-main-g3-animation {
   animation: g2 2.4s linear infinite;
   -webkit-animation: g3 2.4s linear infinite;
 }
-
-@keyframes g3 {
+*/
+/*@keyframes g3 {
   0% ,40% ,100%{
   width: 6rem;
   height: 6rem;
@@ -292,38 +319,11 @@ body {
   height: 6.4rem;
   }
 } 
+*/
 
 
 
 
-
-.h5-turntable-main-gd{
-  width: 6.4rem;
-  height: 6.4rem;
-  background: url(../images/gd1.png) no-repeat;
-  background-size: 4.9rem 4.9rem;
-  background-position: center;
-  position: absolute;
-  top: 0.38rem;
-  z-index: 25;
-}
-
-.h5-turntable-main-gd-animation{
-  animation: gdam 8s ease-in-out infinite;
-  -webkit-animation: gdam 8s ease-in-out infinite;
-}
-@keyframes gdam {
-  0%,25%,50%,75%     {
-  background: url(../images/gd2.png) no-repeat;
-    background-position: center;
-    background-size: 4.9rem 4.9rem;
-  }
-  12.5%,37.5%,100% {
-  background: url(../images/gd1.png) no-repeat;
-    background-position: center;
-    background-size: 4.9rem 4.9rem;
-  }
-}
 
 
 

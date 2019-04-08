@@ -135,9 +135,9 @@
             $(".h5-turntable-main-box-content").stopRotate();
             $('.h5-turntable-container').eq(0).addClass('h5-turntable-container-animation');
             $('.h5-turntable-main-gd').eq(0).addClass('h5-turntable-main-gd-animation');
-            $('.h5-turntable-main-g1').addClass('h5-turntable-main-g1-animation');
-            $('.h5-turntable-main-g2').addClass('h5-turntable-main-g2-animation');
-            $('.h5-turntable-main-g3').addClass('h5-turntable-main-g3-animation');
+            // $('.h5-turntable-main-g1').addClass('h5-turntable-main-g1-animation');
+            // $('.h5-turntable-main-g2').addClass('h5-turntable-main-g2-animation');
+            // $('.h5-turntable-main-g3').addClass('h5-turntable-main-g3-animation');
 
             $(".h5-turntable-main-box-content").rotate({
                 angle: 0,
@@ -147,9 +147,9 @@
                     console.log(textArray)
                     $('.h5-turntable-container').eq(0).removeClass('h5-turntable-container-animation');
                     $('.h5-turntable-main-gd').eq(0).removeClass('h5-turntable-main-gd-animation');
-                    $('.h5-turntable-main-g1').removeClass('h5-turntable-main-g1-animation');
-                    $('.h5-turntable-main-g2').removeClass('h5-turntable-main-g2-animation');
-                    $('.h5-turntable-main-g3').removeClass('h5-turntable-main-g3-animation');
+                    // $('.h5-turntable-main-g1').removeClass('h5-turntable-main-g1-animation');
+                    // $('.h5-turntable-main-g2').removeClass('h5-turntable-main-g2-animation');
+                    // $('.h5-turntable-main-g3').removeClass('h5-turntable-main-g3-animation');
                     $.alert(`恭喜你获得,价值${textArray[0]}元的,${textArray[1]}`);
 
                     rotateFlag = !rotateFlag;
