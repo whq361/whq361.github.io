@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3 奇技淫巧</title>
+    <style>
+        .block {
+            width: 100%;
+        }
+
+        .content {
+            width: 100%;
+            min-height: 200px;
+        }
+
+
+        ol li:nth-child(1) .block .content .parents-div {
+            width: 100%;
+            height: 400px;
+            border: 1px solid red;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ol li:nth-child(1) .block .content .parents-div .child-first {
+            width: 50%;
+            height: 400px;
+            background: yellow;
+            text-align: center;
+
+        }
+
+        ol li:nth-child(1) .block .content .parents-div .child-second {
+            width: calc(50% - 200px);
+            height: 400px;
+            text-align: center;
+            background: blue;
+            color: #ffff;
+        }
+
+        ol li:nth-child(2) .block .content .parents-div {
+            width: 100%;
+            height: 400px;
+            /* border: 1px solid red; */
+            /* text-align: center; */
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+
+        ol li:nth-child(2) .block .content .parents-div .child-first {
+            width: 400px;
+            height: 400px;
+            background: yellow;
+            /* text-align: center; */
+            color: blue;
+            border: 1px solid currentcolor;
+            border-radius: 5px;
+            box-shadow: 0 0 5px currentcolor;
+            margin-right: 200px;
+
+
+        }
+
+        ol li:nth-child(2) .block .content .parents-div .child-first:hover {
+            color: green;
+        }
+
+        ol li:nth-child(2) .block .content .parents-div .child-second {
+            width: 400px;
+            height: 400px;
+            background: blue;
+            /* text-align: center; */
+            color: red;
+            border: 1px solid currentcolor;
+            border-radius: 5px;
+            box-shadow: 0 0 5px currentcolor;
+
+        }
+
+        ol li:nth-child(2) .block .content .parents-div .child-second:hover {
+            color: yellow;
+        }
+
+
+        ol li:nth-child(3) .block .content .parents-div {
+            width: 100%;
+            height: 400px;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            font-weight: 900;
+            color: transparent;
+            background: url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1120616064,961406387&fm=26&gp=0.jpg') no-repeat center center;
+            background-size: cover;
+            -webkit-background-clip: text;
+
+        }
+
+        ol li:nth-child(4) .block .content .parents-div {
+            width: 100%;
+            /* height: 400px; */
+            border: 1px solid red;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        ol li:nth-child(4) .block .content .parents-div img {
+            width: 200px;
+        }
+
+        .fill {
+            object-fit: fill;
+            height: 200px;
+        }
+
+        .contain {
+            object-fit: contain;
+            height: 200px;
+        }
+
+        .cover {
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .none {
+            object-fit: none;
+            height: 200px;
+        }
+
+        .scale-down {
+            object-fit: scale-down;
+            height: 200px;
+        }
+        .introduce{
+            width: 100%;
+            color: blue;
+            line-height: 30px;
+            font-size: 22px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>
+            <div class="block">
+
+                <div class="title">calc动态计算属性</div>
+
+                <div class="introduce">
+                    calc() 函数用于动态计算长度值。主要是使用于页面内动态给dom元素赋值宽高等操作 <br />
+                </div>
+                <div class="content">
+                    <div class="parents-div">
+                        <div class="child-first">
+                            width: 50%;<br />
+                            height: 400px;<br />
+                            background: yellow;
+                        </div>
+                        <div class="child-second">
+                            width: calc(50% - 200px);<br />
+                            height: 400px;<br />
+                            background: blue;<br />
+                            color: #ffff;
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </li>
+        <li>
+            <div class="block">
+
+                <div class="title">currentcolor继承色</div>
+
+                <div class="introduce">
+                    currentColor代表了当前元素被应用上的color颜色值。 使用它可以将当前这个颜色值应用到其他属性上，或者嵌套元素的其他属性上。<br />
+
+                    多用于按钮hover效果实现 简化css代码<br />
+                    试试下面hover效果吧<br />
+                </div>
+                <div class="content">
+                    <div class="parents-div">
+                        <div class="child-first">
+
+
+                            {
+                            <br />
+                            color: blue;<br />
+                            border: 1px solid currentcolor;<br />
+
+                            box-shadow: 0 0 5px currentcolor;
+                            <br />
+                            }<br />
+
+
+
+                            :hover{<br />
+                            color: green;<br />
+                            }
+                        </div>
+                        <div class="child-second">
+                            {
+                            <br />
+                            color: red;<br />
+                            border: 1px solid currentcolor;<br />
+
+                            box-shadow: 0 0 5px currentcolor;
+                            <br />
+                            }<br />
+
+
+
+                            :hover{<br />
+                            color: yellow;<br />
+                            }
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="block">
+
+                <div class="title">background-clip背景、文字剪裁</div>
+                <div class="introduce">
+                    background-clip属性的通俗作用就是指定元素背景所在的区域,有四种取值<br/>
+                    background-clip: border-box|padding-box|content-box|text<br/>
+                    多用于css动画波浪效果,文字渐变色背景图实现
+                </div>
+
+                <div class="content">
+                    <div class="parents-div">
+                        background-clip：text文字剪裁
+
+
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+
+            <div class="block">
+                <!-- https://img.uhomes.com/testing/images/poster/c3/fc4d442701a1cc411d346b82a1936b4ab93757.jpg -->
+                <div class="title">object-fit</div>
+                <div class="introduce">
+                    后台图片上传不是OSS？后端图片没做裁剪？<br />
+                    运营上传图片没有按照尺寸上传？<br />
+                    what???<br />
+                    那么你可能会遇到一个尴尬的情况,就是列表页图片在分立开发时，默认使用的img标签渲染的,没有考虑到后台坑爹,运用坑爹,最后把前端这个爸爸坑了...<br />
+                    项目80%使用img标签,不是使用的div背景图居中显示...<br />
+                    那么,今天你捡到了.<br />
+                    因为刚好遇见我~<br />
+                    img标签只需要一个属性完美实现效果 object-fit:cover<br />
+                    另外补充赠送object-position,和background-position 相同,不过多介绍
+                </div>
+
+                <div class="content">
+                    <div class="parents-div ">
+                        <div>
+                            <div>正常图片</div>
+                            <img
+                                src="https://img.uhomes.com/testing/images/poster/c3/fc4d442701a1cc411d346b82a1936b4ab93757.jpg" />
+                        </div>
+                        <div>
+                            <div>object-fit:fill</div>
+                            <img class="fill"
+                                src="https://img.uhomes.com/testing/images/poster/c3/fc4d442701a1cc411d346b82a1936b4ab93757.jpg" />
+                        </div>
+                        <div>
+                            <div>object-fit:contain</div>
+                            <img class="contain"
+                                src="https://img.uhomes.com/testing/images/poster/c3/fc4d442701a1cc411d346b82a1936b4ab93757.jpg" />
+                        </div>
+                        <div>
+                            <div>object-fit:cover</div>
+                            <img class="cover"
+                                src="https://img.uhomes.com/testing/images/poster/c3/fc4d442701a1cc411d346b82a1936b4ab93757.jpg" />
+                        </div>
+
+                        <div>
+                            <div>object-fit:none</div>
+                            <img class="none"
+                                src="https://img.uhomes.com/testing/images/poster/c3/fc4d442701a1cc411d346b82a1936b4ab93757.jpg" />
+                        </div>
+
+                        <div>
+                            <div>object-fit: scale-down</div>
+                            <img class="  scale-down"
+                                src="https://img.uhomes.com/testing/images/poster/c3/fc4d442701a1cc411d346b82a1936b4ab93757.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ol>
+</body>
+
+</html>
